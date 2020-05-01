@@ -1,0 +1,39 @@
+﻿
+<input type="checkbox" @onchange="@(()=> ShowButtons = !ShowButtons)" />
+<GenericList List="Movies">
+    <ElementTemplate Context="movie" >
+        <IndividualMovie Movie="movie" DisplayButtons="ShowButtons" DeleteMovie="DeleteMovie"></IndividualMovie>
+    </ElementTemplate>
+</GenericList>
+
+<Confirmation @ref="confirmation" Title="Are you Sure want to Delete this" OnCancel="OnCancel" OnConfirm="OnConfirm" >
+    <div>If you Delete this movie you will be unable to restore it back. 
+    Are you sure? name: @movieToBeDeleted.Title</div>
+</Confirmation>
+
+@code{
+    Confirmation confirmation;
+    [Parameter]
+    public List<Movie> Movies { get; set; }
+    protected bool ShowButtons { get; set; } = false;
+    Movie movieToBeDeleted;
+    protected  void DeleteMovie(Movie movie)
+    {
+        movieToBeDeleted = movie;
+        confirmation.Show();
+        //Movies.Remove(movie);
+    }
+    void OnConfirm()
+    {
+        Movies.Remove(movieToBeDeleted);
+        confirmation.Hide();
+        movieToBeDeleted = null;
+    }
+    void OnCancel()
+    {
+        confirmation.Hide();
+        movieToBeDeleted = null;
+    }
+
+}
+

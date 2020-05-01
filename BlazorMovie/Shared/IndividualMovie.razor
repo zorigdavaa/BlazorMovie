@@ -1,0 +1,33 @@
+﻿
+<div class="card-deck">
+    <div class="card">
+        <div class="card-header">
+            @Movie.Title
+        </div>
+        <div class="card-body">
+            @Movie.ReleaseDate
+        </div>
+        @if (DisplayButtons == true)
+        {
+            <div class="card-footer">
+                <button @onclick="@(()=>DeleteMovie.InvokeAsync(Movie))" class="btn btn-primary">Delete</button>
+            </div>
+        }
+
+    </div>
+</div>
+
+
+@code {
+    [Parameter]
+    public Movie Movie { get; set; }
+    [CascadingParameter]
+    public AppState AppState { get; set; }
+    [Parameter]
+    public bool DisplayButtons { get; set; } = false;
+    [Parameter]
+    public EventCallback<Movie> DeleteMovie { get; set; }
+
+
+
+}
