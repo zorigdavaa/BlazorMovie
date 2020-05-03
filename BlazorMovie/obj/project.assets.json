@@ -65,13 +65,14 @@
           "lib/netstandard2.0/Microsoft.AspNetCore.Components.Web.dll": {}
         }
       },
-      "Microsoft.AspNetCore.Components.WebAssembly/3.2.0-preview5.20216.8": {
+      "Microsoft.AspNetCore.Components.WebAssembly/3.2.0-rc1.20223.4": {
         "type": "package",
         "dependencies": {
           "Microsoft.AspNetCore.Components.Web": "3.1.3",
+          "Microsoft.AspNetCore.Components.WebAssembly.HttpHandler": "3.2.0-rc1.20223.4",
           "Microsoft.Extensions.Configuration.Json": "3.1.3",
           "Microsoft.Extensions.Logging": "3.1.3",
-          "Microsoft.JSInterop.WebAssembly": "3.2.0-preview5.20216.8"
+          "Microsoft.JSInterop.WebAssembly": "3.2.0-rc1.20223.4"
         },
         "compile": {
           "lib/netstandard2.1/Microsoft.AspNetCore.Components.WebAssembly.dll": {}
@@ -80,23 +81,32 @@
           "lib/netstandard2.1/Microsoft.AspNetCore.Components.WebAssembly.dll": {}
         }
       },
-      "Microsoft.AspNetCore.Components.WebAssembly.Build/3.2.0-preview5.20216.8": {
+      "Microsoft.AspNetCore.Components.WebAssembly.Build/3.2.0-rc1.20223.4": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNetCore.Components.WebAssembly.Runtime": "3.2.0-preview5.20216.1"
+          "Microsoft.AspNetCore.Components.WebAssembly.Runtime": "3.2.0-rc1.20222.2"
         },
         "build": {
           "build/netstandard1.0/Microsoft.AspNetCore.Components.WebAssembly.Build.props": {},
           "build/netstandard1.0/Microsoft.AspNetCore.Components.WebAssembly.Build.targets": {}
         }
       },
-      "Microsoft.AspNetCore.Components.WebAssembly.DevServer/3.2.0-preview5.20216.8": {
+      "Microsoft.AspNetCore.Components.WebAssembly.DevServer/3.2.0-rc1.20223.4": {
         "type": "package",
         "build": {
           "build/Microsoft.AspNetCore.Components.WebAssembly.DevServer.targets": {}
         }
       },
-      "Microsoft.AspNetCore.Components.WebAssembly.Runtime/3.2.0-preview5.20216.1": {
+      "Microsoft.AspNetCore.Components.WebAssembly.HttpHandler/3.2.0-rc1.20223.4": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.1/System.Net.Http.WebAssemblyHttpHandler.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/_._": {}
+        }
+      },
+      "Microsoft.AspNetCore.Components.WebAssembly.Runtime/3.2.0-rc1.20222.2": {
         "type": "package",
         "build": {
           "build/netstandard1.0/Microsoft.AspNetCore.Components.WebAssembly.Runtime.props": {}
@@ -305,7 +315,7 @@
           "lib/netstandard2.0/Microsoft.JSInterop.dll": {}
         }
       },
-      "Microsoft.JSInterop.WebAssembly/3.2.0-preview5.20216.8": {
+      "Microsoft.JSInterop.WebAssembly/3.2.0-rc1.20223.4": {
         "type": "package",
         "dependencies": {
           "Microsoft.JSInterop": "3.1.3"
@@ -349,7 +359,7 @@
           "lib/netstandard2.0/System.Memory.dll": {}
         }
       },
-      "System.Net.Http.Json/3.2.0-preview5.20210.3": {
+      "System.Net.Http.Json/3.2.0-rc1.20217.1": {
         "type": "package",
         "dependencies": {
           "System.Buffers": "4.5.0",
@@ -507,10 +517,10 @@
         "microsoft.aspnetcore.components.web.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.Components.WebAssembly/3.2.0-preview5.20216.8": {
-      "sha512": "GQMGRaYMlvj5uBzlYTU28ZYvCw+MMnXFgqu7MBz7cZa4LIvossiYTqdRDUT4ZWbpJa7W0m8waG+gGh60ar6N5A==",
+    "Microsoft.AspNetCore.Components.WebAssembly/3.2.0-rc1.20223.4": {
+      "sha512": "nuLiw5EPZWnuwVys/Ty3/wYMvhyeM9+Sr30BZVrxPkEVakF8uYE4bAjEE+Wa7J+2KtCIWun7eqK51z9RxrWh1g==",
       "type": "package",
-      "path": "microsoft.aspnetcore.components.webassembly/3.2.0-preview5.20216.8",
+      "path": "microsoft.aspnetcore.components.webassembly/3.2.0-rc1.20223.4",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -518,14 +528,14 @@
         "THIRD-PARTY-NOTICES.txt",
         "lib/netstandard2.1/Microsoft.AspNetCore.Components.WebAssembly.dll",
         "lib/netstandard2.1/Microsoft.AspNetCore.Components.WebAssembly.xml",
-        "microsoft.aspnetcore.components.webassembly.3.2.0-preview5.20216.8.nupkg.sha512",
+        "microsoft.aspnetcore.components.webassembly.3.2.0-rc1.20223.4.nupkg.sha512",
         "microsoft.aspnetcore.components.webassembly.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.Components.WebAssembly.Build/3.2.0-preview5.20216.8": {
-      "sha512": "IJY7RRNCWdxo4M3Abqo/hh5e5Er3TF1ctIMbfg7oyGIJUtYiVMw0G2anaqRphyuTw2nbPlALIkTM+FjskF6Ggg==",
+    "Microsoft.AspNetCore.Components.WebAssembly.Build/3.2.0-rc1.20223.4": {
+      "sha512": "mdd+8ENKKC6O/2nz7H7Vnout3JJKZR50hiB3AUz18nlJMIqrdfrtEq+pESuQW68A8e2vv4vyxPlRfPZOvbJsfQ==",
       "type": "package",
-      "path": "microsoft.aspnetcore.components.webassembly.build/3.2.0-preview5.20216.8",
+      "path": "microsoft.aspnetcore.components.webassembly.build/3.2.0-rc1.20223.4",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
@@ -534,13 +544,14 @@
         "THIRD-PARTY-NOTICES.txt",
         "build/netstandard1.0/Microsoft.AspNetCore.Components.WebAssembly.Build.props",
         "build/netstandard1.0/Microsoft.AspNetCore.Components.WebAssembly.Build.targets",
-        "microsoft.aspnetcore.components.webassembly.build.3.2.0-preview5.20216.8.nupkg.sha512",
+        "microsoft.aspnetcore.components.webassembly.build.3.2.0-rc1.20223.4.nupkg.sha512",
         "microsoft.aspnetcore.components.webassembly.build.nuspec",
         "targets/All.props",
         "targets/All.targets",
         "targets/Blazor.MonoRuntime.props",
         "targets/Blazor.MonoRuntime.targets",
         "targets/BuiltInBclLinkerDescriptor.xml",
+        "targets/CollationLinkerDescriptor.xml",
         "targets/Compression.targets",
         "targets/Publish.targets",
         "targets/ServiceWorkerAssetsManifest.targets",
@@ -561,10 +572,10 @@
         "tools/netfx/System.Runtime.CompilerServices.Unsafe.dll"
       ]
     },
-    "Microsoft.AspNetCore.Components.WebAssembly.DevServer/3.2.0-preview5.20216.8": {
-      "sha512": "H186sW8MzSjDI+F8Fr4HaR8fG1N3PehQWJfYw9TjQyer2eyklDNYmSNYvSaVvFBG6v3Xep7aI4hkrY2BmFNWVg==",
+    "Microsoft.AspNetCore.Components.WebAssembly.DevServer/3.2.0-rc1.20223.4": {
+      "sha512": "5/ZvhCvOIPBWKccEJIRRjnibSitahbY0g5kznd0QKsJ9A9RVQQEYv8CaxGR/EPenwzDzBwSpQRyGcvAgrDcNQg==",
       "type": "package",
-      "path": "microsoft.aspnetcore.components.webassembly.devserver/3.2.0-preview5.20216.8",
+      "path": "microsoft.aspnetcore.components.webassembly.devserver/3.2.0-rc1.20223.4",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
@@ -572,7 +583,7 @@
         "Icon.png",
         "THIRD-PARTY-NOTICES.txt",
         "build/Microsoft.AspNetCore.Components.WebAssembly.DevServer.targets",
-        "microsoft.aspnetcore.components.webassembly.devserver.3.2.0-preview5.20216.8.nupkg.sha512",
+        "microsoft.aspnetcore.components.webassembly.devserver.3.2.0-rc1.20223.4.nupkg.sha512",
         "microsoft.aspnetcore.components.webassembly.devserver.nuspec",
         "tools/BlazorDebugProxy/Microsoft.AspNetCore.Components.WebAssembly.DebugProxy.deps.json",
         "tools/BlazorDebugProxy/Microsoft.AspNetCore.Components.WebAssembly.DebugProxy.dll",
@@ -621,10 +632,23 @@
         "tools/blazor-devserver.runtimeconfig.json"
       ]
     },
-    "Microsoft.AspNetCore.Components.WebAssembly.Runtime/3.2.0-preview5.20216.1": {
-      "sha512": "H2wq9dEDaVWUy0bb6bHwwXPmJtCd45KpuvbeY1Jn5HlGDVzYFlL0OgsVzPrD0Uq/Qw6jBrSzFjqCrwOlW0jJoQ==",
+    "Microsoft.AspNetCore.Components.WebAssembly.HttpHandler/3.2.0-rc1.20223.4": {
+      "sha512": "fvydzztEvqZYrm1JeyHdHMXQnomVEcMuR4QHJo+dNAOoMVpZP/IhF6mJfRkMZMMv+dwThIfiohpBjCF3HIvJ4A==",
       "type": "package",
-      "path": "microsoft.aspnetcore.components.webassembly.runtime/3.2.0-preview5.20216.1",
+      "path": "microsoft.aspnetcore.components.webassembly.httphandler/3.2.0-rc1.20223.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "lib/netstandard2.1/System.Net.Http.WebAssemblyHttpHandler.dll",
+        "microsoft.aspnetcore.components.webassembly.httphandler.3.2.0-rc1.20223.4.nupkg.sha512",
+        "microsoft.aspnetcore.components.webassembly.httphandler.nuspec"
+      ]
+    },
+    "Microsoft.AspNetCore.Components.WebAssembly.Runtime/3.2.0-rc1.20222.2": {
+      "sha512": "UUnsWBR2MWOXRv9eoFKi9gtoCeM/Qi8sGI7Y+3jIsq/xDD5WvHVjOTLaS3iMENENlHPgVxzkhQxpVy9BTvTEQg==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.components.webassembly.runtime/3.2.0-rc1.20222.2",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
@@ -632,7 +656,7 @@
         "Icon.png",
         "THIRD-PARTY-NOTICES.txt",
         "build/netstandard1.0/Microsoft.AspNetCore.Components.WebAssembly.Runtime.props",
-        "microsoft.aspnetcore.components.webassembly.runtime.3.2.0-preview5.20216.1.nupkg.sha512",
+        "microsoft.aspnetcore.components.webassembly.runtime.3.2.0-rc1.20222.2.nupkg.sha512",
         "microsoft.aspnetcore.components.webassembly.runtime.nuspec",
         "tools/dotnetwasm/bcl/Facades/Microsoft.Win32.Primitives.dll",
         "tools/dotnetwasm/bcl/Facades/Microsoft.Win32.Registry.AccessControl.dll",
@@ -802,7 +826,7 @@
         "tools/dotnetwasm/framework/System.Net.Http.WebAssemblyHttpHandler.dll",
         "tools/dotnetwasm/framework/WebAssembly.Bindings.dll",
         "tools/dotnetwasm/framework/WebAssembly.Net.WebSockets.dll",
-        "tools/dotnetwasm/wasm/dotnet.3.2.0-preview5.20216.1.js",
+        "tools/dotnetwasm/wasm/dotnet.3.2.0-rc1.20222.2.js",
         "tools/dotnetwasm/wasm/dotnet.timezones.dat",
         "tools/dotnetwasm/wasm/dotnet.wasm",
         "tools/monolinker/Mono.Cecil.dll",
@@ -1088,10 +1112,10 @@
         "microsoft.jsinterop.nuspec"
       ]
     },
-    "Microsoft.JSInterop.WebAssembly/3.2.0-preview5.20216.8": {
-      "sha512": "+EXJXGAm0IBLHujUlMo4z4QhpUFFdmsvKBsL0/VLKKyAE8tTg5cPtOlBw4EcIkgtXBgb0ky9KY0Ln0OyNCKX8g==",
+    "Microsoft.JSInterop.WebAssembly/3.2.0-rc1.20223.4": {
+      "sha512": "qL2Lj1a3AeiE0p0HHoeM5myIF4XUR1bmyiEophucg017Rw/PZ9N9LOgyxTourcviIuZ0Rnkjq1IPEzDsMYWsIA==",
       "type": "package",
-      "path": "microsoft.jsinterop.webassembly/3.2.0-preview5.20216.8",
+      "path": "microsoft.jsinterop.webassembly/3.2.0-rc1.20223.4",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1099,7 +1123,7 @@
         "THIRD-PARTY-NOTICES.txt",
         "lib/netstandard2.1/Microsoft.JSInterop.WebAssembly.dll",
         "lib/netstandard2.1/Microsoft.JSInterop.WebAssembly.xml",
-        "microsoft.jsinterop.webassembly.3.2.0-preview5.20216.8.nupkg.sha512",
+        "microsoft.jsinterop.webassembly.3.2.0-rc1.20223.4.nupkg.sha512",
         "microsoft.jsinterop.webassembly.nuspec"
       ]
     },
@@ -1242,10 +1266,10 @@
         "version.txt"
       ]
     },
-    "System.Net.Http.Json/3.2.0-preview5.20210.3": {
-      "sha512": "l2zb7rnO7DNuGWTqoTg2aRtWct8gbOs1o2amt5llj7Bat3pkCLJEu6+MwTqc40jEP6b+YB8Dnp1ig2wzZYVOvA==",
+    "System.Net.Http.Json/3.2.0-rc1.20217.1": {
+      "sha512": "OzMbyFclZH6efCQkHfYj+9xnTtD/s5t4NVURRi5EiHKB1BQwE64qYNrnB6nV7Y93UiRp6ai+KjpZHX/Xzz58nw==",
       "type": "package",
-      "path": "system.net.http.json/3.2.0-preview5.20210.3",
+      "path": "system.net.http.json/3.2.0-rc1.20217.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1256,7 +1280,7 @@
         "lib/net461/System.Net.Http.Json.xml",
         "lib/netstandard2.0/System.Net.Http.Json.dll",
         "lib/netstandard2.0/System.Net.Http.Json.xml",
-        "system.net.http.json.3.2.0-preview5.20210.3.nupkg.sha512",
+        "system.net.http.json.3.2.0-rc1.20217.1.nupkg.sha512",
         "system.net.http.json.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
@@ -1420,10 +1444,10 @@
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.1": [
-      "Microsoft.AspNetCore.Components.WebAssembly >= 3.2.0-preview5.20216.8",
-      "Microsoft.AspNetCore.Components.WebAssembly.Build >= 3.2.0-preview5.20216.8",
-      "Microsoft.AspNetCore.Components.WebAssembly.DevServer >= 3.2.0-preview5.20216.8",
-      "System.Net.Http.Json >= 3.2.0-preview5.20210.3"
+      "Microsoft.AspNetCore.Components.WebAssembly >= 3.2.0-rc1.20223.4",
+      "Microsoft.AspNetCore.Components.WebAssembly.Build >= 3.2.0-rc1.20223.4",
+      "Microsoft.AspNetCore.Components.WebAssembly.DevServer >= 3.2.0-rc1.20223.4",
+      "System.Net.Http.Json >= 3.2.0-rc1.20217.1"
     ]
   },
   "packageFolders": {
@@ -1472,21 +1496,21 @@
         "dependencies": {
           "Microsoft.AspNetCore.Components.WebAssembly": {
             "target": "Package",
-            "version": "[3.2.0-preview5.20216.8, )"
+            "version": "[3.2.0-rc1.20223.4, )"
           },
           "Microsoft.AspNetCore.Components.WebAssembly.Build": {
             "suppressParent": "All",
             "target": "Package",
-            "version": "[3.2.0-preview5.20216.8, )"
+            "version": "[3.2.0-rc1.20223.4, )"
           },
           "Microsoft.AspNetCore.Components.WebAssembly.DevServer": {
             "suppressParent": "All",
             "target": "Package",
-            "version": "[3.2.0-preview5.20216.8, )"
+            "version": "[3.2.0-rc1.20223.4, )"
           },
           "System.Net.Http.Json": {
             "target": "Package",
-            "version": "[3.2.0-preview5.20210.3, )"
+            "version": "[3.2.0-rc1.20217.1, )"
           }
         },
         "imports": [
@@ -1504,7 +1528,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300-preview-015115\\RuntimeIdentifierGraph.json"
       }
     }
   }
