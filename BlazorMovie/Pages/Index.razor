@@ -1,36 +1,26 @@
 ﻿@page "/"
 @inject IMovieRepository Repository
 
-<h1>Hello, world!</h1>
+    <div>
+        <h3>Movie</h3>
+        <MoviesList Movies="movies">
 
-Welcome to your new app.
+        </MoviesList>
+    </div>
 
 
-<MoviesList Movies="movies" >
 
-</MoviesList>
 
 
 @code {
     protected List<Movie> movies;
-    protected async override Task OnInitializedAsync()
+    protected override void OnInitialized()
     {
-        //await Task.Delay(2000);
+
         movies = Repository.GetMovies();
 
-        Console.WriteLine("Oninitialized " + movies.Count);
+        
     }
-    protected override void OnParametersSet()
-    {
-        Console.WriteLine("OnParametersSet " + movies.Count);
-    }
-    protected override void OnAfterRender(bool firstRender)
-    {
-        Console.WriteLine("On afterRender " + "firsREnder=" + firstRender.ToString());
-    }
-    protected override bool ShouldRender()
-    {
-        return true;
-    }
+
 
 }

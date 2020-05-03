@@ -6,7 +6,7 @@
   "linkerEnabled": false,
   "resources": {
     "assembly": {
-      "BlazorMovie.dll": "sha256-lRZbwJdBGgpfHCR0TilxMb3hJ9WTEwq537auf4Aq4Ho=",
+      "BlazorMovie.dll": "sha256-KLvZvy\/w\/lVklBe+eoPNb0U8NoLDOk1e5JrgSWZxCMc=",
       "System.Net.Http.Json.dll": "sha256-mfk4mGJNEuOK1ya6HNucfAmophVZxc+JZZGUjS6Ch2g=",
       "System.Buffers.dll": "sha256-ZxXy75PYbzJxNfAc\/SAP1nUYm4gt1jSaOpFnBb9m85M=",
       "mscorlib.dll": "sha256-Zylu+solGct5ydpTnVgblWpHQqxeutna+kXYVbcd6og=",
@@ -44,6 +44,7 @@
       "System.ComponentModel.DataAnnotations.dll": "sha256-k5q\/yAEpdOHTfNdPtt0syzCQzjAY10WVpPdmO2b8\/S4=",
       "Microsoft.AspNetCore.Components.dll": "sha256-jqp6xS5jDFDsISGorhiYZQ2if3hAiols6d4C5BNnMQ4=",
       "Microsoft.Extensions.Logging.Abstractions.dll": "sha256-45ia6XmGIa5WI3cHUIE9KhVornlZleYW+B5FPpfD1wQ=",
+      "Microsoft.JSInterop.dll": "sha256-K3dpli228kQQ75WVqoiIdmn8u8q8gZHixcWDdCHCRgU=",
       "Microsoft.AspNetCore.Components.WebAssembly.dll": "sha256-9WOejdz13Sqg6jOCnsReDFrnu1GKzRKH4IRI7KE+zhM=",
       "Microsoft.Extensions.DependencyInjection.dll": "sha256-8Y81cOKaNJHZZvHu0TROikruBOenBHdE5WwI2BOkNNE=",
       "Microsoft.Extensions.Primitives.dll": "sha256-DG1MjidH81NA50uWH63eWmXLCxt18sJzoF2oXVlyvlY=",
@@ -56,11 +57,10 @@
       "Microsoft.Extensions.FileProviders.Abstractions.dll": "sha256-X3n9B0GKwWD1R7H+6ydrvoazqRQrQRjS+NH5VG6VJNY=",
       "Microsoft.Extensions.Logging.dll": "sha256-zNP4aHLW\/rhi6gW72YV8xGy1rLa+RQZtwvWEpiwBSrs=",
       "Microsoft.Extensions.Options.dll": "sha256-oAIlpv09S\/0jXnze744E1V88Oaw8Ql1x3Alw0hsVYdw=",
-      "Microsoft.JSInterop.dll": "sha256-K3dpli228kQQ75WVqoiIdmn8u8q8gZHixcWDdCHCRgU=",
       "Microsoft.JSInterop.WebAssembly.dll": "sha256-ly0M2c3xTIQTThpFK82FfNKJVWZ\/mdm+FkwD54DHwSQ="
     },
     "pdb": {
-      "BlazorMovie.pdb": "sha256-+QLQFXp+u83TeBcxVp9n4+1xNId5QZYk5uTx3CjeZOU="
+      "BlazorMovie.pdb": "sha256-nEnabDLX4rt3tBcwUda5kJ3aAjEWCFJ3Bsj3WGj\/BNc="
     },
     "runtime": {
       "dotnet.3.2.0-preview5.20216.1.js": "sha256-gww0bLqGo0LNAahNiZcdEk\/kmDKmSFAFGtY8LL0fBcY=",

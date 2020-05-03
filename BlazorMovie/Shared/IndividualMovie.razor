@@ -1,33 +1,32 @@
 ﻿
-<div class="card-deck">
-    <div class="card">
-        <div class="card-header">
-            @Movie.Title
-        </div>
-        <div class="card-body">
-            @Movie.ReleaseDate
-        </div>
-        @if (DisplayButtons == true)
-        {
-            <div class="card-footer">
-                <button @onclick="@(()=>DeleteMovie.InvokeAsync(Movie))" class="btn btn-primary">Delete</button>
-            </div>
-        }
-
+<div class="individual-movie-container">
+    <a href="@MovieUrl">
+        <img class="movie-poster" src="@Movie.Poster" />
+    </a>
+    <p><a href="@MovieUrl">@Movie.TitleBrief</a></p>
+    <div>
+        <a class="btn btn-info">Edit</a>
+        <button type="button" class="btn btn-danger" @onclick="@(()=>DeleteMovie.InvokeAsync(Movie))">
+            Delete
+        </button>
     </div>
+
 </div>
 
 
 @code {
     [Parameter]
     public Movie Movie { get; set; }
-    [CascadingParameter]
-    public AppState AppState { get; set; }
+
     [Parameter]
     public bool DisplayButtons { get; set; } = false;
     [Parameter]
     public EventCallback<Movie> DeleteMovie { get; set; }
-
+    private string MovieUrl = string.Empty;
+    protected override void OnInitialized()
+    {
+        MovieUrl = "movie/";
+    }
 
 
 }
