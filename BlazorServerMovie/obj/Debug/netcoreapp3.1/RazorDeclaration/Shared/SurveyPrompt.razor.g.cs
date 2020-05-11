@@ -5,7 +5,7 @@
 #pragma warning disable 0649
 #pragma warning disable 0169
 
-namespace BlazorServerMovie.Shared
+namespace BlazorMovie.Server.Shared
 {
     #line hidden
     using System;

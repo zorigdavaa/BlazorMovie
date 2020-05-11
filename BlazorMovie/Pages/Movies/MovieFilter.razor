@@ -1,0 +1,78 @@
+﻿@page "/movies/search"
+@inject IMovieRepository Repository
+<h3>Search Movie</h3>
+
+<div class="form-inline">
+    <div class="form-group mb-2">
+
+        <input type="text" class="form-control" id="title" placeholder="Search"
+               @bind-value="title" @bind-value:event="oninput" @onkeypress="@((KeyboardEventArgs e)=>TitleKeyPress(e))" />
+    </div>
+
+    <div class="form-group mb-2">
+        <select @bind="selectedGenre" class="form-control">
+            <option value="0">--Select something</option>
+            @foreach (var genre in Genres)
+            {
+                <option value="@genre.Id">@genre.Name</option>
+            }
+
+        </select>
+    </div>
+    <div class="form-group mx-sm-3 mb-2">
+        <input type="checkbox" class="form-check-input" id="upcomingRelease" @bind="UpComingRelease" />
+        <label for="upcomingRelease" class="form-check-label">UpComing Releases</label>
+    </div>
+    <div class="form-group mx-sm-3 mb-2">
+        <input type="checkbox" class="form-check-input" id="InTheather" @bind="InTheather" />
+        <label for="InTheather" class="form-check-label">In Theather</label>
+    </div>
+    <button type="button" class="btn btn-primary mb-2 mx-sm-3" @onclick="SearchForMovies">Filter</button>
+    <button type="button" class="btn btn-primary mb-2  " @onclick="Clear">Clear</button>
+</div>
+<MoviesList Movies="Movies">
+</MoviesList>
+
+@code {
+    #region Properties
+    string title = "";
+    string selectedGenre = "0";
+    bool UpComingRelease = false;
+    bool InTheather = false;
+    List<Movie> Movies;
+    #endregion
+
+
+    List<Genre> Genres = new List<Genre> { new Genre { Id = 1, Name = "Comedy" }, new Genre { Id = 2, Name = "Horro" } };
+    void SearchForMovies()
+    {
+        if (title.Length==0)
+        {
+            Movies = Repository.GetMovies();
+        }
+        Movies = Movies.Where(x=>x.Title.ToUpper().Contains(title.ToUpper())).ToList();
+    }
+
+    void Clear()
+    {
+        Movies = Repository.GetMovies();
+        title = "";
+        selectedGenre = "0";
+        UpComingRelease = false;
+        InTheather = false;
+
+    }
+    private void TitleKeyPress(KeyboardEventArgs e)
+    {
+        if (e.Key == "Enter")
+        {
+            //do something....
+        }
+    }
+
+
+    protected override void OnInitialized()
+    {
+        Movies = Repository.GetMovies();
+    }
+}

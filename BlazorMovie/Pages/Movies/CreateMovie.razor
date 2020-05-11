@@ -1,6 +1,26 @@
-﻿@page "/movies/createMovie"
+﻿@page "/movies/create"
+@inject NavigationManager navigationmanager
+@inject IMovieRepository movieRepository
 <h3>CreateMovie</h3>
 
+<MovieForm Movie="Movie" OnValidSubmit="SaveMovie" NotSelectedGenre="NotSelectedGenre"></MovieForm>
+
 @code {
+    public Movie Movie { get; set; } = new Movie();
+    public List<Genre> NotSelectedGenre { get; set; } = new List<Genre>
+    {
+        new Genre{ Id=1, Name="Comedy"},
+        new Genre{ Id=1, Name="Action"},
+        new Genre{ Id=1, Name="Drama"}
+    };
+    protected override void OnInitialized()
+    {
+        //Movie= movieRepository.
+    }
+
+    void SaveMovie()
+    {
+        //navigationmanager.NavigateTo("/");
+    }
 
 }

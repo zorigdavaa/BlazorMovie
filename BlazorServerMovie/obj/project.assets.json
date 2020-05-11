@@ -678,9 +678,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Visual studio repos\\UdemyCourseRepo\\Blazor Tutorial\\BlazorMovie\\BlazorServerMovie\\BlazorServerMovie.csproj",
-      "projectName": "BlazorServerMovie",
-      "projectPath": "E:\\Visual studio repos\\UdemyCourseRepo\\Blazor Tutorial\\BlazorMovie\\BlazorServerMovie\\BlazorServerMovie.csproj",
+      "projectUniqueName": "E:\\Visual studio repos\\UdemyCourseRepo\\Blazor Tutorial\\BlazorMovie\\BlazorServerMovie\\BlazorMovie.Server.csproj",
+      "projectName": "BlazorMovie.Server",
+      "projectPath": "E:\\Visual studio repos\\UdemyCourseRepo\\Blazor Tutorial\\BlazorMovie\\BlazorServerMovie\\BlazorMovie.Server.csproj",
       "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
       "outputPath": "E:\\Visual studio repos\\UdemyCourseRepo\\Blazor Tutorial\\BlazorMovie\\BlazorServerMovie\\obj\\",
       "projectStyle": "PackageReference",
@@ -737,7 +737,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300-preview-015115\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300-preview-015135\\RuntimeIdentifierGraph.json"
       }
     }
   }

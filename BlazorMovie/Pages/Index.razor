@@ -8,6 +8,11 @@
         </MoviesList>
     </div>
 
+<CustomTypeAhead SearchMethod="SearchMethod" Placeholder="Haih yumaa bichwel bich"  >
+    <ResultTemplate>
+        @context
+    </ResultTemplate>
+</CustomTypeAhead>
 
 
 
@@ -16,10 +21,16 @@
     protected List<Movie> movies;
     protected override void OnInitialized()
     {
-
         movies = Repository.GetMovies();
-
-        
+    }
+    private async Task<IEnumerable<string>> SearchMethod(string searchText)
+    {
+        await Task.Delay(2000);
+        if (searchText=="test")
+        {
+            return Enumerable.Empty<string>();
+        }
+        return new List<string>() { "Zorigoo", "Khongoroo" };
     }
 
 

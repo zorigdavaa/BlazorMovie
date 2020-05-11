@@ -74,21 +74,21 @@ using BlazorMovie.Shared;
 #nullable disable
 #nullable restore
 #line 10 "E:\Visual studio repos\UdemyCourseRepo\Blazor Tutorial\BlazorMovie\BlazorMovie\_Imports.razor"
-using BlazorMovie.Models;
-
-#line default
-#line hidden
-#nullable disable
-#nullable restore
-#line 11 "E:\Visual studio repos\UdemyCourseRepo\Blazor Tutorial\BlazorMovie\BlazorMovie\_Imports.razor"
 using BlazorMovie.Services;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
+#line 11 "E:\Visual studio repos\UdemyCourseRepo\Blazor Tutorial\BlazorMovie\BlazorMovie\_Imports.razor"
+using BlazorMovie.Shared.Entities;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
 #line 12 "E:\Visual studio repos\UdemyCourseRepo\Blazor Tutorial\BlazorMovie\BlazorMovie\_Imports.razor"
-using static BlazorMovie.Shared.MainLayout;
+using BlazorMovie.Helpers;
 
 #line default
 #line hidden
@@ -112,7 +112,7 @@ using static BlazorMovie.Shared.MainLayout;
             , 5, (movie) => (__builder2) => {
                 __builder2.AddMarkupContent(6, "\r\n                ");
                 __builder2.OpenComponent<BlazorMovie.Shared.IndividualMovie>(7);
-                __builder2.AddAttribute(8, "Movie", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<BlazorMovie.Models.Movie>(
+                __builder2.AddAttribute(8, "Movie", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<BlazorMovie.Shared.Entities.Movie>(
 #nullable restore
 #line 7 "E:\Visual studio repos\UdemyCourseRepo\Blazor Tutorial\BlazorMovie\BlazorMovie\Shared\MoviesList.razor"
                                         movie
@@ -121,7 +121,7 @@ using static BlazorMovie.Shared.MainLayout;
 #line hidden
 #nullable disable
                 ));
-                __builder2.AddAttribute(9, "DeleteMovie", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Microsoft.AspNetCore.Components.EventCallback<BlazorMovie.Models.Movie>>(Microsoft.AspNetCore.Components.EventCallback.Factory.Create<BlazorMovie.Models.Movie>(this, 
+                __builder2.AddAttribute(9, "DeleteMovie", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<Microsoft.AspNetCore.Components.EventCallback<BlazorMovie.Shared.Entities.Movie>>(Microsoft.AspNetCore.Components.EventCallback.Factory.Create<BlazorMovie.Shared.Entities.Movie>(this, 
 #nullable restore
 #line 7 "E:\Visual studio repos\UdemyCourseRepo\Blazor Tutorial\BlazorMovie\BlazorMovie\Shared\MoviesList.razor"
                                                             DeleteMovie

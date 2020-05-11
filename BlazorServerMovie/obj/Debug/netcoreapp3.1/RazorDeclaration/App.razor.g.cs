@@ -5,7 +5,7 @@
 #pragma warning disable 0649
 #pragma warning disable 0169
 
-namespace BlazorServerMovie
+namespace BlazorMovie.Server
 {
     #line hidden
     using System;

@@ -1,6 +1,11 @@
 ﻿@page "/People/CreatePerson"
 <h3>CreatePerson</h3>
+<PersonForm Person="Person" OnValidSumbit="Create"></PersonForm>
 
 @code {
-
+    Person Person = new Person();
+    void Create()
+    {
+        Console.WriteLine("Creating Person......");
+    }
 }

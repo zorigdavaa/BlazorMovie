@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "DOIrKffWkIAYzRNn9KSUQOXDj0tyDU0IcYcoulmMdJxsdWhrd+m7kJscfvK9TuPOEeIZSReGg8v2N4PvI2R1dA==",
+  "dgSpecHash": "1JzWMfge7BBHUiTuxBGvn+rxGqM/0GPLUK3kFYdoSRv/QloplMUHdCIg7r0nlOyHpC3XhaZ1oVpDkiS4ZvQpSg==",
   "success": true,
-  "projectFilePath": "E:\\Visual studio repos\\UdemyCourseRepo\\Blazor Tutorial\\BlazorMovie\\BlazorServerMovie\\BlazorServerMovie.csproj",
+  "projectFilePath": "E:\\Visual studio repos\\UdemyCourseRepo\\Blazor Tutorial\\BlazorMovie\\BlazorServerMovie\\BlazorMovie.Server.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Dell\\.nuget\\packages\\microsoft.aspnetcore.authorization\\3.1.3\\microsoft.aspnetcore.authorization.3.1.3.nupkg.sha512",
     "C:\\Users\\Dell\\.nuget\\packages\\microsoft.aspnetcore.components\\3.1.3\\microsoft.aspnetcore.components.3.1.3.nupkg.sha512",
