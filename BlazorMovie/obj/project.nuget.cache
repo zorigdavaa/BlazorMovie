@@ -1,18 +1,24 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "zawIDmR0Mo2Ac/EZJ88Y+yvo1xr6P3s0L54rO9UYv/9i97zgFLajN3dqhECF3Bug9VYo2ADmPubLYmxGs6BsQw==",
+=======
+  "dgSpecHash": "qw0exX7mY7w9uYjawEmZqPtjtq6LwtUCR0Gi8lxDFsDcor9oyUfAdruxJhKR1YQoXKQVUQupJc3Uhi0yJ6oe1Q==",
+>>>>>>> CleanUp
   "success": true,
   "projectFilePath": "E:\\Visual studio repos\\UdemyCourseRepo\\Blazor Tutorial\\BlazorMovie\\BlazorMovie\\BlazorMovie.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Dell\\.nuget\\packages\\markdig\\0.20.0\\markdig.0.20.0.nupkg.sha512",
     "C:\\Users\\Dell\\.nuget\\packages\\microsoft.aspnetcore.authorization\\3.1.3\\microsoft.aspnetcore.authorization.3.1.3.nupkg.sha512",
     "C:\\Users\\Dell\\.nuget\\packages\\microsoft.aspnetcore.components\\3.1.3\\microsoft.aspnetcore.components.3.1.3.nupkg.sha512",
     "C:\\Users\\Dell\\.nuget\\packages\\microsoft.aspnetcore.components.analyzers\\3.1.3\\microsoft.aspnetcore.components.analyzers.3.1.3.nupkg.sha512",
     "C:\\Users\\Dell\\.nuget\\packages\\microsoft.aspnetcore.components.forms\\3.1.3\\microsoft.aspnetcore.components.forms.3.1.3.nupkg.sha512",
     "C:\\Users\\Dell\\.nuget\\packages\\microsoft.aspnetcore.components.web\\3.1.3\\microsoft.aspnetcore.components.web.3.1.3.nupkg.sha512",
-    "C:\\Users\\Dell\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly\\3.2.0-preview5.20216.8\\microsoft.aspnetcore.components.webassembly.3.2.0-preview5.20216.8.nupkg.sha512",
-    "C:\\Users\\Dell\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly.build\\3.2.0-preview5.20216.8\\microsoft.aspnetcore.components.webassembly.build.3.2.0-preview5.20216.8.nupkg.sha512",
-    "C:\\Users\\Dell\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly.devserver\\3.2.0-preview5.20216.8\\microsoft.aspnetcore.components.webassembly.devserver.3.2.0-preview5.20216.8.nupkg.sha512",
-    "C:\\Users\\Dell\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly.runtime\\3.2.0-preview5.20216.1\\microsoft.aspnetcore.components.webassembly.runtime.3.2.0-preview5.20216.1.nupkg.sha512",
+    "C:\\Users\\Dell\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly\\3.2.0-rc1.20223.4\\microsoft.aspnetcore.components.webassembly.3.2.0-rc1.20223.4.nupkg.sha512",
+    "C:\\Users\\Dell\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly.build\\3.2.0-rc1.20223.4\\microsoft.aspnetcore.components.webassembly.build.3.2.0-rc1.20223.4.nupkg.sha512",
+    "C:\\Users\\Dell\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly.devserver\\3.2.0-rc1.20223.4\\microsoft.aspnetcore.components.webassembly.devserver.3.2.0-rc1.20223.4.nupkg.sha512",
+    "C:\\Users\\Dell\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly.httphandler\\3.2.0-rc1.20223.4\\microsoft.aspnetcore.components.webassembly.httphandler.3.2.0-rc1.20223.4.nupkg.sha512",
+    "C:\\Users\\Dell\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly.runtime\\3.2.0-rc1.20222.2\\microsoft.aspnetcore.components.webassembly.runtime.3.2.0-rc1.20222.2.nupkg.sha512",
     "C:\\Users\\Dell\\.nuget\\packages\\microsoft.aspnetcore.metadata\\3.1.3\\microsoft.aspnetcore.metadata.3.1.3.nupkg.sha512",
     "C:\\Users\\Dell\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.0\\microsoft.bcl.asyncinterfaces.1.1.0.nupkg.sha512",
     "C:\\Users\\Dell\\.nuget\\packages\\microsoft.extensions.configuration\\3.1.3\\microsoft.extensions.configuration.3.1.3.nupkg.sha512",
@@ -30,16 +36,17 @@
     "C:\\Users\\Dell\\.nuget\\packages\\microsoft.extensions.options\\3.1.3\\microsoft.extensions.options.3.1.3.nupkg.sha512",
     "C:\\Users\\Dell\\.nuget\\packages\\microsoft.extensions.primitives\\3.1.3\\microsoft.extensions.primitives.3.1.3.nupkg.sha512",
     "C:\\Users\\Dell\\.nuget\\packages\\microsoft.jsinterop\\3.1.3\\microsoft.jsinterop.3.1.3.nupkg.sha512",
-    "C:\\Users\\Dell\\.nuget\\packages\\microsoft.jsinterop.webassembly\\3.2.0-preview5.20216.8\\microsoft.jsinterop.webassembly.3.2.0-preview5.20216.8.nupkg.sha512",
+    "C:\\Users\\Dell\\.nuget\\packages\\microsoft.jsinterop.webassembly\\3.2.0-rc1.20223.4\\microsoft.jsinterop.webassembly.3.2.0-rc1.20223.4.nupkg.sha512",
     "C:\\Users\\Dell\\.nuget\\packages\\system.buffers\\4.5.0\\system.buffers.4.5.0.nupkg.sha512",
     "C:\\Users\\Dell\\.nuget\\packages\\system.componentmodel.annotations\\4.7.0\\system.componentmodel.annotations.4.7.0.nupkg.sha512",
     "C:\\Users\\Dell\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
-    "C:\\Users\\Dell\\.nuget\\packages\\system.net.http.json\\3.2.0-preview5.20210.3\\system.net.http.json.3.2.0-preview5.20210.3.nupkg.sha512",
+    "C:\\Users\\Dell\\.nuget\\packages\\system.net.http.json\\3.2.0-rc1.20217.1\\system.net.http.json.3.2.0-rc1.20217.1.nupkg.sha512",
     "C:\\Users\\Dell\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Users\\Dell\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.7.1\\system.runtime.compilerservices.unsafe.4.7.1.nupkg.sha512",
     "C:\\Users\\Dell\\.nuget\\packages\\system.text.encodings.web\\4.7.0\\system.text.encodings.web.4.7.0.nupkg.sha512",
     "C:\\Users\\Dell\\.nuget\\packages\\system.text.json\\4.7.1\\system.text.json.4.7.1.nupkg.sha512",
-    "C:\\Users\\Dell\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.2\\system.threading.tasks.extensions.4.5.2.nupkg.sha512"
+    "C:\\Users\\Dell\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.2\\system.threading.tasks.extensions.4.5.2.nupkg.sha512",
+    "C:\\Users\\Dell\\.nuget\\packages\\tewr.blazor.filereader\\1.5.0.20109\\tewr.blazor.filereader.1.5.0.20109.nupkg.sha512"
   ],
   "logs": []
 }

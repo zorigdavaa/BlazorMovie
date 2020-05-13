@@ -1,39 +1,34 @@
-﻿
-<input type="checkbox" @onchange="@(()=> ShowButtons = !ShowButtons)" />
-<GenericList List="Movies">
-    <ElementTemplate Context="movie" >
-        <IndividualMovie Movie="movie" DisplayButtons="ShowButtons" DeleteMovie="DeleteMovie"></IndividualMovie>
-    </ElementTemplate>
-</GenericList>
+﻿@inject IJSRuntime js
 
-<Confirmation @ref="confirmation" Title="Are you Sure want to Delete this" OnCancel="OnCancel" OnConfirm="OnConfirm" >
-    <div>If you Delete this movie you will be unable to restore it back. 
-    Are you sure? name: @movieToBeDeleted.Title</div>
-</Confirmation>
+
+    <div class="movies-container">
+        <GenericList List="Movies">
+            <ElementTemplate Context="movie">
+                <IndividualMovie Movie="movie" DeleteMovie="DeleteMovie"></IndividualMovie>
+            </ElementTemplate>
+        </GenericList>
+    </div>
+
+
+
 
 @code{
-    Confirmation confirmation;
+
     [Parameter]
     public List<Movie> Movies { get; set; }
-    protected bool ShowButtons { get; set; } = false;
-    Movie movieToBeDeleted;
-    protected  void DeleteMovie(Movie movie)
+
+    protected async Task DeleteMovie(Movie movie)
     {
-        movieToBeDeleted = movie;
-        confirmation.Show();
-        //Movies.Remove(movie);
+        await js.MyFunction("custom message");
+        var confirmed = await js.Confirm($"Are you sure want to delete {movie.Title}?");
+
+        if (confirmed)
+        {
+            Movies.Remove(movie);
+        }
+
     }
-    void OnConfirm()
-    {
-        Movies.Remove(movieToBeDeleted);
-        confirmation.Hide();
-        movieToBeDeleted = null;
-    }
-    void OnCancel()
-    {
-        confirmation.Hide();
-        movieToBeDeleted = null;
-    }
+
 
 }
 
