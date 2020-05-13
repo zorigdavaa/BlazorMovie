@@ -1,0 +1,5 @@
+E:\Visual studio repos\UdemyCourseRepo\Blazor Tutorial\BlazorMovie\BlazorMovie.Shared\bin\Debug\netstandard2.0\BlazorMovie.Shared.deps.json
+E:\Visual studio repos\UdemyCourseRepo\Blazor Tutorial\BlazorMovie\BlazorMovie.Shared\bin\Debug\netstandard2.0\BlazorMovie.Shared.dll
+E:\Visual studio repos\UdemyCourseRepo\Blazor Tutorial\BlazorMovie\BlazorMovie.Shared\obj\Debug\netstandard2.0\BlazorMovie.Shared.csprojAssemblyReference.cache
+E:\Visual studio repos\UdemyCourseRepo\Blazor Tutorial\BlazorMovie\BlazorMovie.Shared\obj\Debug\netstandard2.0\BlazorMovie.Shared.AssemblyInfoInputs.cache
+E:\Visual studio repos\UdemyCourseRepo\Blazor Tutorial\BlazorMovie\BlazorMovie.Shared\obj\Debug\netstandard2.0\BlazorMovie.Shared.AssemblyInfo.cs
