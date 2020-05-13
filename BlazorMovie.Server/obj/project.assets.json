@@ -1280,6 +1280,19 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
+      },
+      "BlazorMovie.Shared/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "System.ComponentModel.Annotations": "4.7.0"
+        },
+        "compile": {
+          "bin/placeholder/BlazorMovie.Shared.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BlazorMovie.Shared.dll": {}
+        }
       }
     }
   },
@@ -4941,10 +4954,16 @@
         "system.xml.xmlserializer.4.3.0.nupkg.sha512",
         "system.xml.xmlserializer.nuspec"
       ]
+    },
+    "BlazorMovie.Shared/1.0.0": {
+      "type": "project",
+      "path": "../BlazorMovie.Shared/BlazorMovie.Shared.csproj",
+      "msbuildProject": "../BlazorMovie.Shared/BlazorMovie.Shared.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
+      "BlazorMovie.Shared >= 1.0.0",
       "Microsoft.EntityFrameworkCore.SqlServer >= 3.1.4",
       "Microsoft.EntityFrameworkCore.Tools >= 3.1.4"
     ]
@@ -4981,7 +5000,11 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "projectReferences": {}
+          "projectReferences": {
+            "E:\\Visual studio repos\\UdemyCourseRepo\\Blazor Tutorial\\BlazorMovie\\BlazorMovie.Shared\\BlazorMovie.Shared.csproj": {
+              "projectPath": "E:\\Visual studio repos\\UdemyCourseRepo\\Blazor Tutorial\\BlazorMovie\\BlazorMovie.Shared\\BlazorMovie.Shared.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace BlazorMovie.Shared.Entities
 {
-    class MovieGenres
+    public class MovieGenres
     {
         public int MovieId { get; set; }
         public int GenresId { get; set; }

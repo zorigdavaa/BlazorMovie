@@ -41,3 +41,16 @@ E:\Visual studio repos\UdemyCourseRepo\Blazor Tutorial\BlazorMovie\BlazorMovie.S
 E:\Visual studio repos\UdemyCourseRepo\Blazor Tutorial\BlazorMovie\BlazorMovie.Server\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 E:\Visual studio repos\UdemyCourseRepo\Blazor Tutorial\BlazorMovie\BlazorMovie.Server\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 E:\Visual studio repos\UdemyCourseRepo\Blazor Tutorial\BlazorMovie\BlazorMovie.Server\obj\Debug\netcoreapp3.1\BlazorMovie.Server.csproj.CopyComplete
+E:\Visual studio repos\UdemyCourseRepo\Blazor Tutorial\BlazorMovie\BlazorMovie.Server\bin\Debug\netcoreapp3.1\BlazorMovie.Server.deps.json
+E:\Visual studio repos\UdemyCourseRepo\Blazor Tutorial\BlazorMovie\BlazorMovie.Server\bin\Debug\netcoreapp3.1\BlazorMovie.Server.runtimeconfig.json
+E:\Visual studio repos\UdemyCourseRepo\Blazor Tutorial\BlazorMovie\BlazorMovie.Server\bin\Debug\netcoreapp3.1\BlazorMovie.Server.runtimeconfig.dev.json
+E:\Visual studio repos\UdemyCourseRepo\Blazor Tutorial\BlazorMovie\BlazorMovie.Server\bin\Debug\netcoreapp3.1\BlazorMovie.Server.dll
+E:\Visual studio repos\UdemyCourseRepo\Blazor Tutorial\BlazorMovie\BlazorMovie.Server\bin\Debug\netcoreapp3.1\BlazorMovie.Server.pdb
+E:\Visual studio repos\UdemyCourseRepo\Blazor Tutorial\BlazorMovie\BlazorMovie.Server\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
+E:\Visual studio repos\UdemyCourseRepo\Blazor Tutorial\BlazorMovie\BlazorMovie.Server\bin\Debug\netcoreapp3.1\BlazorMovie.Shared.dll
+E:\Visual studio repos\UdemyCourseRepo\Blazor Tutorial\BlazorMovie\BlazorMovie.Server\bin\Debug\netcoreapp3.1\BlazorMovie.Shared.pdb
+E:\Visual studio repos\UdemyCourseRepo\Blazor Tutorial\BlazorMovie\BlazorMovie.Server\obj\Debug\netcoreapp3.1\BlazorMovie.Server.csproj.CoreCompileInputs.cache
+E:\Visual studio repos\UdemyCourseRepo\Blazor Tutorial\BlazorMovie\BlazorMovie.Server\obj\Debug\netcoreapp3.1\BlazorMovie.Server.MvcApplicationPartsAssemblyInfo.cache
+E:\Visual studio repos\UdemyCourseRepo\Blazor Tutorial\BlazorMovie\BlazorMovie.Server\obj\Debug\netcoreapp3.1\BlazorMovie.Server.dll
+E:\Visual studio repos\UdemyCourseRepo\Blazor Tutorial\BlazorMovie\BlazorMovie.Server\obj\Debug\netcoreapp3.1\BlazorMovie.Server.pdb
+E:\Visual studio repos\UdemyCourseRepo\Blazor Tutorial\BlazorMovie\BlazorMovie.Server\obj\Debug\netcoreapp3.1\BlazorMovie.Server.genruntimeconfig.cache
