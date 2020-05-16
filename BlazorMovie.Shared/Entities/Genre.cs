@@ -10,7 +10,7 @@ namespace BlazorMovie.Shared.Entities
         public int Id { get; set; }
         [Required]
         public string Name { get; set; }
-        public List<MovieGenres> MoveGenres { get; set; } = new List<MovieGenres>();
+        public List<MovieGenres> MovieGenres { get; set; } = new List<MovieGenres>();
 
     }
 }

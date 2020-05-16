@@ -18,11 +18,15 @@ namespace BlazorMovie.Server
             CreateHostBuilder(args).Build().Run();
         }
 
+
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
-                    webBuilder.UseStartup<Startup>();
+                    webBuilder.UseConfiguration(new ConfigurationBuilder()
+                                .AddJsonFile("appsettings.json")
+                                .Build())
+                              .UseStartup<Startup>();
                 });
     }
 }

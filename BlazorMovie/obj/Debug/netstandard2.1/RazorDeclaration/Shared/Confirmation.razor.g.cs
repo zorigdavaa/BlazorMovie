@@ -97,6 +97,13 @@ using BlazorMovie.Helpers;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 13 "E:\Visual studio repos\UdemyCourseRepo\Blazor Tutorial\BlazorMovie\BlazorMovie\_Imports.razor"
+using BlazorMovie.Repository;
+
+#line default
+#line hidden
+#nullable disable
     public partial class Confirmation : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998

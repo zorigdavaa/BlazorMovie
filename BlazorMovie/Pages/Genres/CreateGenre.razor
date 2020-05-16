@@ -1,13 +1,26 @@
 ﻿@page "/genre/create"
+@inject IGenreRepository genreRepository
+@inject NavigationManager navigationManager
+
 <h3>CreateGenre</h3>
 
-<GenreForm Genre="Genre" OnValidSubmit="Create"></GenreForm>
+<GenreForm Genre="genre" OnValidSubmit="Create"></GenreForm>
 
 @code {
-    private Genre Genre=new Genre();
+    private Genre genre=new Genre();
     private void Create()
     {
+        try
+        {
+            genreRepository.CreateGenre(genre);
+            navigationManager.NavigateTo("genres");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex.Message);
+           
+        }
         Console.WriteLine("Create method fired");
-        Console.WriteLine(Genre.Name);
+        Console.WriteLine(genre.Name);
     }
 }

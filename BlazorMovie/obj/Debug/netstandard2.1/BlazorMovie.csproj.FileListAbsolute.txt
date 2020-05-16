@@ -420,8 +420,8 @@ E:\Visual studio repos\UdemyCourseRepo\Blazor Tutorial\BlazorMovie\BlazorMovie\o
 E:\Visual studio repos\UdemyCourseRepo\Blazor Tutorial\BlazorMovie\BlazorMovie\obj\Debug\netstandard2.1\Razor\Shared\CustomTypeAhead.razor.g.cs
 E:\Visual studio repos\UdemyCourseRepo\Blazor Tutorial\BlazorMovie\BlazorMovie\obj\Debug\netstandard2.1\RazorDeclaration\Shared\MultipleSelectorTypeAhead.razor.g.cs
 E:\Visual studio repos\UdemyCourseRepo\Blazor Tutorial\BlazorMovie\BlazorMovie\obj\Debug\netstandard2.1\Razor\Shared\MultipleSelectorTypeAhead.razor.g.cs
-E:\Visual studio repos\UdemyCourseRepo\Blazor Tutorial\BlazorMovie\BlazorMovie\obj\Debug\netstandard2.1\integrity\HAqP5Y95MuB3Ps-o_WvyzZwrh16VMTBnxE6mu5R1jDM=.hash
-E:\Visual studio repos\UdemyCourseRepo\Blazor Tutorial\BlazorMovie\BlazorMovie\obj\Debug\netstandard2.1\integrity\WaQS8f9okoYQSCJMKkGWjqtCQQba8IOZVlnqCnRLgG0=.hash
-E:\Visual studio repos\UdemyCourseRepo\Blazor Tutorial\BlazorMovie\BlazorMovie\obj\Debug\netstandard2.1\integrity\SvXCbqQiVF63S75ytBC3WUhpYt5W4BULGbzzrBAqVkA=.hash
-E:\Visual studio repos\UdemyCourseRepo\Blazor Tutorial\BlazorMovie\BlazorMovie\obj\Debug\netstandard2.1\integrity\3yqMn-xc_d9Cp5RKaxgNaKf1wdXwg4d6KSLk4-r_tuc=.hash
-E:\Visual studio repos\UdemyCourseRepo\Blazor Tutorial\BlazorMovie\BlazorMovie\obj\Debug\netstandard2.1\integrity\cqY2jgbm_fwra7g-O3qMHRttvajP8kfuN6P01rlkTPM=.hash
+E:\Visual studio repos\UdemyCourseRepo\Blazor Tutorial\BlazorMovie\BlazorMovie\obj\Debug\netstandard2.1\integrity\3GH5mj0SDtQNsiOarJCtOO_eEOxtkJLXoN1-LpM2qM8=.hash
+E:\Visual studio repos\UdemyCourseRepo\Blazor Tutorial\BlazorMovie\BlazorMovie\obj\Debug\netstandard2.1\integrity\0S0MI6RjR-RDt-Iz27KL6xXAkRFgmL7MwzXf65IFhjg=.hash
+E:\Visual studio repos\UdemyCourseRepo\Blazor Tutorial\BlazorMovie\BlazorMovie\obj\Debug\netstandard2.1\integrity\bdlcX2MK_U00qu2VvKdN3DYiOCMACpALKM8_YtvixdY=.hash
+E:\Visual studio repos\UdemyCourseRepo\Blazor Tutorial\BlazorMovie\BlazorMovie\obj\Debug\netstandard2.1\integrity\Sql4hlSdD1UILfP7QsFJFN1Vuqdo7FAWVCyq1NyCTto=.hash
+E:\Visual studio repos\UdemyCourseRepo\Blazor Tutorial\BlazorMovie\BlazorMovie\obj\Debug\netstandard2.1\integrity\UN_VCIF6zOLFZeQ2LIgw4k5lh0ZDfPBYTxvozRdyA6k=.hash

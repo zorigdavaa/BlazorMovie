@@ -1,10 +1,6 @@
 {
   "version": 2,
-<<<<<<< HEAD
-  "dgSpecHash": "zawIDmR0Mo2Ac/EZJ88Y+yvo1xr6P3s0L54rO9UYv/9i97zgFLajN3dqhECF3Bug9VYo2ADmPubLYmxGs6BsQw==",
-=======
   "dgSpecHash": "qw0exX7mY7w9uYjawEmZqPtjtq6LwtUCR0Gi8lxDFsDcor9oyUfAdruxJhKR1YQoXKQVUQupJc3Uhi0yJ6oe1Q==",
->>>>>>> CleanUp
   "success": true,
   "projectFilePath": "E:\\Visual studio repos\\UdemyCourseRepo\\Blazor Tutorial\\BlazorMovie\\BlazorMovie\\BlazorMovie.csproj",
   "expectedPackageFiles": [
@@ -48,5 +44,12 @@
     "C:\\Users\\Dell\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.2\\system.threading.tasks.extensions.4.5.2.nupkg.sha512",
     "C:\\Users\\Dell\\.nuget\\packages\\tewr.blazor.filereader\\1.5.0.20109\\tewr.blazor.filereader.1.5.0.20109.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file E:\\Visual studio repos\\UdemyCourseRepo\\Blazor Tutorial\\BlazorMovie\\BlazorMovie\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
