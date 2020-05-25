@@ -128,13 +128,13 @@ namespace BlazorMovie.Server.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Person");
+                    b.ToTable("People");
                 });
 
             modelBuilder.Entity("BlazorMovie.Shared.Entities.MovieGenres", b =>
                 {
                     b.HasOne("BlazorMovie.Shared.Entities.Genre", "Genre")
-                        .WithMany("MoveGenres")
+                        .WithMany("MovieGenres")
                         .HasForeignKey("GenreId");
 
                     b.HasOne("BlazorMovie.Shared.Entities.Movie", "Movie")
@@ -147,13 +147,13 @@ namespace BlazorMovie.Server.Migrations
             modelBuilder.Entity("BlazorMovie.Shared.Entities.MoviesActors", b =>
                 {
                     b.HasOne("BlazorMovie.Shared.Entities.Movie", "Movie")
-                        .WithMany()
+                        .WithMany("MoviesActors")
                         .HasForeignKey("MovieId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("BlazorMovie.Shared.Entities.Person", "Person")
-                        .WithMany()
+                        .WithMany("MoviesActors")
                         .HasForeignKey("PersonId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();

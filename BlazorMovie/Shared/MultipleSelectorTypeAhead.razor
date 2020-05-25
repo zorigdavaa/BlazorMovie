@@ -25,7 +25,7 @@
     T draggeditem;
     void SelectedElement(T item)
     {
-        if (!SelectedElements.Any(x=>x.Equals(item)))
+        if (!(SelectedElements.Any(x=>x.Equals(item))))
         {
             SelectedElements.Add(item);
         }
@@ -38,7 +38,9 @@
     {
         if (!item.Equals(draggeditem))
         {
+            //0
             var dragElementIndex = SelectedElements.IndexOf(draggeditem);
+            //1
             var elementIndex = SelectedElements.IndexOf(item);
             SelectedElements[elementIndex] = draggeditem;
             SelectedElements[dragElementIndex] = item;

@@ -23,9 +23,11 @@ namespace BlazorMovie
 
             builder.Services.AddTransient(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
 
-            builder.Services.AddSingleton<IMovieRepository, MovieInMemoryRepository>();
+            builder.Services.AddSingleton<IRepository, InMemoryRepository>();
             builder.Services.AddScoped<IHttpService, HttpService>();
             builder.Services.AddScoped<IGenreRepository, GenreRepository>();
+            builder.Services.AddScoped<IPersonRepository, PersonRepository>();
+            builder.Services.AddScoped<IMovieRepository, MovieRepository>();
             builder.Services.AddFileReaderService(options=>options.UseWasmSharedBuffer=true);
 
             await builder.Build().RunAsync();

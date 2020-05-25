@@ -1,4 +1,6 @@
-﻿<EditForm  Model="Person" OnInvalidSubmit="OnValidSumbit">
+﻿<EditForm  Model="Person" OnValidSubmit="OnValidSumbit">
+    <DataAnnotationsValidator></DataAnnotationsValidator>
+    
     <div class="form-group">
         <label for="name">Name</label>
         <div>
@@ -19,7 +21,8 @@
     <div class="form-group form-markdown">
         <InputMarkDown @bind-Value="Person.BioGraphy" For="@(()=>Person.BioGraphy)" Label="BioGraphy"></InputMarkDown>
     </div>
-    <button type="submit" class="btn btn-primary" >Submit</button>
+    <input type="submit" class="btn btn-primary" value="Submit" />
+    <ValidationSummary></ValidationSummary>
 </EditForm>
 
 

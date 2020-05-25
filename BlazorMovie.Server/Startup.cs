@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-
+using BlazorMovie.Server.Helpers;
 
 namespace BlazorMovie.Server
 {
@@ -31,6 +31,8 @@ namespace BlazorMovie.Server
             {
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
             });
+            services.AddScoped<IFileStorageService, InAppStorageService>();
+            services.AddHttpContextAccessor();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -41,11 +43,11 @@ namespace BlazorMovie.Server
                 app.UseDeveloperExceptionPage();
                 app.UseWebAssemblyDebugging();
             }
-
+            app.UseStaticFiles();
             app.UseHttpsRedirection();
             app.UseBlazorFrameworkFiles();
             app.UseRouting();
-            app.UseStaticFiles();
+
 
             app.UseEndpoints(endpoints =>
             {

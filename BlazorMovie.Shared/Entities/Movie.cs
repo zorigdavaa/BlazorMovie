@@ -18,6 +18,7 @@ namespace BlazorMovie.Shared.Entities
         public DateTime? ReleaseDate { get; set; }
         public string Poster { get; set; }
         public List<MovieGenres> MovieGenres { get; set; } = new List<MovieGenres>();
+        public List<MoviesActors> MoviesActors { get; set; }
         public string TitleBrief
         {
             get 

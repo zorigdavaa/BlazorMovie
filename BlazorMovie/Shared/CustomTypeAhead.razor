@@ -1,7 +1,7 @@
 ﻿@using System.Timers;
 @typeparam TItem;
 @* Modification from chris sainty's typeAhead component *@
-<div class="blazor-typeahead">
+<div class="blazored-typeahead">
     <div class="blazored-typeahead__controls">
         <input type="text"
                class="blazored-typeahead__input"
@@ -57,10 +57,12 @@
     [Parameter] public string Placeholder { get; set; }
     [Parameter] public int MinimumLenght { get; set; } = 3;
     [Parameter] public int Debounce { get; set; } = 300;
+
     [Parameter] public Func<string, Task<IEnumerable<TItem>>> SearchMethod { get; set; }
     [Parameter] public RenderFragment<TItem> ResultTemplate { get; set; }
     [Parameter] public RenderFragment NotFoundTemplate { get; set; }
     [Parameter] public EventCallback<TItem> ValueChanged { get; set; }
+
 
     private bool IsSearching = false;
     private bool IsShowingSuggestions = false;
