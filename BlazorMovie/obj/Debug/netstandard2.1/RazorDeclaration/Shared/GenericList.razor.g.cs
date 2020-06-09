@@ -104,6 +104,20 @@ using BlazorMovie.Repository;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 14 "E:\Visual studio repos\UdemyCourseRepo\Blazor Tutorial\BlazorMovie\BlazorMovie\_Imports.razor"
+using BlazorMovie.Shared.DTO_s;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 15 "E:\Visual studio repos\UdemyCourseRepo\Blazor Tutorial\BlazorMovie\BlazorMovie\_Imports.razor"
+using BlazorMovie.Pages.Movies;
+
+#line default
+#line hidden
+#nullable disable
     public partial class GenericList<TItem> : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998

@@ -1,37 +1,28 @@
 ﻿@page "/"
-@inject IRepository Repository
+@inject IMovieRepository movieRepo
 
-    <div>
-        <h3>Movie</h3>
-        <MoviesList Movies="movies">
+<div>
+    <h3>In Theathers</h3>
+    <MoviesList Movies="InTheathers">
 
-        </MoviesList>
-    </div>
+    </MoviesList>
+</div>
+<div>
+    <h3>Upcoming Releases</h3>
+    <MoviesList Movies="UpcomingReleases">
 
-<CustomTypeAhead SearchMethod="SearchMethod" Placeholder="Haih yumaa bichwel bich"  >
-    <ResultTemplate>
-        @context
-    </ResultTemplate>
-</CustomTypeAhead>
-
-
-
+    </MoviesList>
+</div>
 
 @code {
-    protected List<Movie> movies;
-    protected override void OnInitialized()
+    protected List<Movie> InTheathers;
+    protected List<Movie> UpcomingReleases;
+    protected override async Task OnInitializedAsync()
     {
-        movies = Repository.GetMovies();
-    }
-    private async Task<IEnumerable<string>> SearchMethod(string searchText)
-    {
-        await Task.Delay(2000);
-        if (searchText=="test")
-        {
-            return Enumerable.Empty<string>();
-        }
-        return new List<string>() { "Zorigoo", "Khongoroo" };
-    }
+        var response = await movieRepo.GetIndexPageDto();
 
+        InTheathers = response.InTheaters;
+        UpcomingReleases = response.UpcomingReleases;
+    }
 
 }

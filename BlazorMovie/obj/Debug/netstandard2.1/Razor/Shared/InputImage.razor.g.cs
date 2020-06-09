@@ -101,6 +101,20 @@ using BlazorMovie.Repository;
 #line hidden
 #nullable disable
 #nullable restore
+#line 14 "E:\Visual studio repos\UdemyCourseRepo\Blazor Tutorial\BlazorMovie\BlazorMovie\_Imports.razor"
+using BlazorMovie.Shared.DTO_s;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 15 "E:\Visual studio repos\UdemyCourseRepo\Blazor Tutorial\BlazorMovie\BlazorMovie\_Imports.razor"
+using BlazorMovie.Pages.Movies;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
 #line 1 "E:\Visual studio repos\UdemyCourseRepo\Blazor Tutorial\BlazorMovie\BlazorMovie\Shared\InputImage.razor"
 using System.IO;
 

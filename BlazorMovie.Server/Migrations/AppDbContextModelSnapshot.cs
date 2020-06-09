@@ -72,13 +72,10 @@ namespace BlazorMovie.Server.Migrations
                     b.Property<int>("MovieId")
                         .HasColumnType("int");
 
-                    b.Property<int>("GenresId")
+                    b.Property<int>("GenreId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("GenreId")
-                        .HasColumnType("int");
-
-                    b.HasKey("MovieId", "GenresId");
+                    b.HasKey("MovieId", "GenreId");
 
                     b.HasIndex("GenreId");
 
@@ -135,7 +132,9 @@ namespace BlazorMovie.Server.Migrations
                 {
                     b.HasOne("BlazorMovie.Shared.Entities.Genre", "Genre")
                         .WithMany("MovieGenres")
-                        .HasForeignKey("GenreId");
+                        .HasForeignKey("GenreId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("BlazorMovie.Shared.Entities.Movie", "Movie")
                         .WithMany("MovieGenres")

@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorMovie", "BlazorMovie\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorMovie.Server", "BlazorMovie.Server\BlazorMovie.Server.csproj", "{EED448C8-C943-42FE-BB87-F77BF8FE508B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorMovie.Shared", "BlazorMovie.Shared\BlazorMovie.Shared.csproj", "{3A8CA485-5EA9-44D6-A87A-0E2D159D874E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorMovie.Shared", "BlazorMovie.Shared\BlazorMovie.Shared.csproj", "{3A8CA485-5EA9-44D6-A87A-0E2D159D874E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

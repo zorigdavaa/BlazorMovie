@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
+using System.Net.Http.Json;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
@@ -40,6 +41,7 @@ namespace BlazorMovie.Helpers
         }
         public async Task<HttpResponseWrapper<TResponse>> Post<T,TResponse>(string url, T data)
         {
+            
             var datajson = JsonSerializer.Serialize(data);
             var stringContent = new StringContent(datajson, Encoding.UTF8, "application/json");
             var response = await httpClient.PostAsync(url, stringContent);
@@ -52,8 +54,23 @@ namespace BlazorMovie.Helpers
             {
                 return new HttpResponseWrapper<TResponse>(default, false, response);
             }
-           
         }
+        public async Task<HttpResponseWrapper<object>> Put<T>(string url, T data)
+        {
+            var datajson = JsonSerializer.Serialize(data);
+            var stringContent = new StringContent(datajson, Encoding.UTF8, "application/json");
+            var response = await httpClient.PutAsync(url, stringContent);
+            
+            return new HttpResponseWrapper<object>(null, response.IsSuccessStatusCode, response);
+        }
+        public async Task<HttpResponseWrapper<object>> Delete(string url)
+        {
+            var responseHttp = await httpClient.DeleteAsync(url);
+            return new HttpResponseWrapper<object>(null, responseHttp.IsSuccessStatusCode, responseHttp);
+        }
+
+
+
         private async Task<T> Deserialize<T>(HttpResponseMessage httpResponse, JsonSerializerOptions options)
         {
             var responseString = await httpResponse.Content.ReadAsStringAsync();

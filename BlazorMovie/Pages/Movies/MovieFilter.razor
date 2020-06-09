@@ -1,16 +1,20 @@
 ﻿@page "/movies/search"
-@inject IRepository Repository
+@inject IMovieRepository movieRepo
+@inject IGenreRepository genreRepo
+@inject NavigationManager navMan
 <h3>Search Movie</h3>
 
+
+<EditForm Model="filterMovieDTO">
 <div class="form-inline">
     <div class="form-group mb-2">
 
         <input type="text" class="form-control" id="title" placeholder="Search"
-               @bind-value="title" @bind-value:event="oninput" @onkeypress="@((KeyboardEventArgs e)=>TitleKeyPress(e))" />
+               @bind-value="filterMovieDTO.TItle" @bind-value:event="oninput" @onkeypress="@((KeyboardEventArgs e)=>TitleKeyPress(e))" />
     </div>
 
     <div class="form-group mb-2">
-        <select @bind="selectedGenre" class="form-control">
+        <select @bind="filterMovieDTO.GenreId" class="form-control">
             <option value="0">--Select something</option>
             @foreach (var genre in Genres)
             {
@@ -20,59 +24,127 @@
         </select>
     </div>
     <div class="form-group mx-sm-3 mb-2">
-        <input type="checkbox" class="form-check-input" id="upcomingRelease" @bind="UpComingRelease" />
+        <input type="checkbox" class="form-check-input" id="upcomingRelease" @bind="filterMovieDTO.UpcomingReleases" />
         <label for="upcomingRelease" class="form-check-label">UpComing Releases</label>
     </div>
     <div class="form-group mx-sm-3 mb-2">
-        <input type="checkbox" class="form-check-input" id="InTheather" @bind="InTheather" />
+        <input type="checkbox" class="form-check-input" id="InTheather" @bind="filterMovieDTO.InTheaters" />
         <label for="InTheather" class="form-check-label">In Theather</label>
     </div>
     <button type="button" class="btn btn-primary mb-2 mx-sm-3" @onclick="SearchForMovies">Filter</button>
     <button type="button" class="btn btn-primary mb-2  " @onclick="Clear">Clear</button>
 </div>
+
+</EditForm>
+
 <MoviesList Movies="Movies">
 </MoviesList>
+<Pagination CurrentPage="filterMovieDTO.Page" TotalAmountPages="totalAmountPages" SelectedPage="SelectedPage" ></Pagination>
+
 
 @code {
     #region Properties
-    string title = "";
-    string selectedGenre = "0";
-    bool UpComingRelease = false;
-    bool InTheather = false;
     List<Movie> Movies;
+    List<Genre> Genres = new List<Genre>();
+    FilterMovieDTO filterMovieDTO = new FilterMovieDTO();
+    int totalAmountPages;
     #endregion
 
-
-    List<Genre> Genres = new List<Genre> { new Genre { Id = 1, Name = "Comedy" }, new Genre { Id = 2, Name = "Horro" } };
-    void SearchForMovies()
+    protected async Task SelectedPage(int page)
     {
-        if (title.Length==0)
-        {
-            Movies = Repository.GetMovies();
-        }
-        Movies = Movies.Where(x=>x.Title.ToUpper().Contains(title.ToUpper())).ToList();
+        filterMovieDTO.Page = page;
+        await LoadMovies();
     }
 
-    void Clear()
+    protected async Task SearchForMovies()
     {
-        Movies = Repository.GetMovies();
-        title = "";
-        selectedGenre = "0";
-        UpComingRelease = false;
-        InTheather = false;
+        await LoadMovies();
+    }
+
+    protected async Task Clear()
+    {
+        filterMovieDTO.TItle = "";
+        filterMovieDTO.GenreId = 0;
+        filterMovieDTO.UpcomingReleases = false;
+        filterMovieDTO.InTheaters = false;
+        await LoadMovies();
 
     }
-    private void TitleKeyPress(KeyboardEventArgs e)
+    private async Task TitleKeyPress(KeyboardEventArgs e)
     {
         if (e.Key == "Enter")
         {
-            //do something....
+            await LoadMovies();
+        }
+
+    }
+
+    private void FillFilterWithQueryStrings(Dictionary<string, string> queryString)
+    {
+        if (queryString.ContainsKey("genreId"))
+        {
+            filterMovieDTO.GenreId = int.Parse(queryString["genreId"]);
+        }
+        if (queryString.ContainsKey("title"))
+        {
+            filterMovieDTO.TItle = queryString["title"];
+        }
+        if (queryString.ContainsKey("genreId"))
+        {
+            filterMovieDTO.GenreId = int.Parse(queryString["genreId"]);
+        }
+        if (queryString.ContainsKey("intheaters"))
+        {
+            filterMovieDTO.UpcomingReleases = bool.Parse(queryString["intheaters"]);
+        }
+        if (queryString.ContainsKey("upcomingReleases"))
+        {
+            filterMovieDTO.UpcomingReleases = bool.Parse(queryString["upcomingReleases"]);
+        }
+        if (queryString.ContainsKey("page"))
+        {
+            filterMovieDTO.GenreId = int.Parse(queryString["page"]);
         }
     }
 
-
-    protected override void OnInitialized()
+    protected override async Task OnInitializedAsync()
     {
-        Movies = Repository.GetMovies();
+        var queryStrings = navMan.GetQueryStrings(navMan.Uri);
+        Genres = await genreRepo.GetGenres();
+        if (queryStrings!=null)
+        {
+            FillFilterWithQueryStrings(queryStrings);
+        }
+            await LoadMovies();
+    }
+
+    protected async Task LoadMovies()
+    {
+        var queryString = GenerateQueryString();
+        if (!string.IsNullOrWhiteSpace(queryString))
+        {
+            queryString = $"?{queryString}";
+            navMan.NavigateTo("/movies/search" + queryString);
+        }
+
+        var paginatedResponse = await movieRepo.GetMoviesFiltered(filterMovieDTO);
+        Movies = paginatedResponse.Response;
+        totalAmountPages = paginatedResponse.TotalAmountPages;
+    }
+    private string GenerateQueryString()
+    {
+        var queryStringsDict = new Dictionary<string, string>();
+        queryStringsDict["genreId"] = filterMovieDTO.GenreId.ToString();
+        queryStringsDict["title"] = filterMovieDTO.TItle ?? "";
+        queryStringsDict["intheaters"] = filterMovieDTO.InTheaters.ToString();
+        queryStringsDict["upcomingReleases"] = filterMovieDTO.UpcomingReleases.ToString();
+        queryStringsDict["page"] = filterMovieDTO.Page.ToString();
+
+        //genreid=4&title=spider
+
+        var defaultValue = new List<string> { "false", "", "0" };
+        return string.Join("&", queryStringsDict
+            .Where(x => !defaultValue.Contains(x.Value.ToLowerInvariant()))
+            .Select(x=>$"{x.Key}={System.Web.HttpUtility.UrlEncode( x.Value)}"));
     }
 }

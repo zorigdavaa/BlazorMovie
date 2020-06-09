@@ -1,6 +1,7 @@
 ﻿@page "/genres"
 @inject IGenreRepository genreRepo
 
+
 <h3>GenresIndex</h3>
 
 <div class="form-group">
@@ -21,8 +22,8 @@
                     <tr>
                         <td>@genre.Name</td>
                         <td>
-                            <a class="btn btn-success">Edit</a>
-                            <button class="btn btn-danger">Delete</button>
+                            <a href="/Genre/Edit/@genre.Id" class="btn btn-success">Edit</a>
+                            <button class="btn btn-danger" @onclick="@(()=>Delete(genre.Id))">Delete</button>
                         </td>
                     </tr>
                 }
@@ -34,11 +35,17 @@
 @code {
     List<Genre> Genres;
 
+    protected async Task Delete(int id)
+    {
+        await genreRepo.DeleteGenre(id);
+        Genres = await genreRepo.GetGenres();
+    }
+
     protected override async Task OnInitializedAsync()
     {
         try
         {
-           Genres= await genreRepo.GetGenres();
+            Genres= await genreRepo.GetGenres();
         }
         catch (Exception e)
         {

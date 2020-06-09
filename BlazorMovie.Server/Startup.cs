@@ -9,6 +9,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using BlazorMovie.Server.Helpers;
+using Microsoft.Extensions.Options;
+using AutoMapper;
 
 namespace BlazorMovie.Server
 {
@@ -25,7 +27,7 @@ namespace BlazorMovie.Server
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers();
+            services.AddControllers().AddNewtonsoftJson(options=>options.SerializerSettings.ReferenceLoopHandling=Newtonsoft.Json.ReferenceLoopHandling.Ignore);
             services.AddRazorPages();
             services.AddDbContextPool<AppDbContext>(options =>
             {
@@ -33,6 +35,7 @@ namespace BlazorMovie.Server
             });
             services.AddScoped<IFileStorageService, InAppStorageService>();
             services.AddHttpContextAccessor();
+            services.AddAutoMapper(typeof(Startup));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -47,7 +50,6 @@ namespace BlazorMovie.Server
             app.UseHttpsRedirection();
             app.UseBlazorFrameworkFiles();
             app.UseRouting();
-
 
             app.UseEndpoints(endpoints =>
             {

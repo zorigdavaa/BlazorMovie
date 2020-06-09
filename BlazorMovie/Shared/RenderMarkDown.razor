@@ -1,12 +1,15 @@
 ﻿@using Markdig
-@if (HTMLContent!=null)
+@if (HTMLContent != null)
 {
-    @((MarkupString)HTMLContent)
+
+     @((MarkupString) HTMLContent)
+
 }
 
 @code {
     [Parameter] public string MarkdownContent { get; set; }
     private string HTMLContent;
+
     protected override void OnParametersSet()
     {
         if (!string.IsNullOrEmpty(MarkdownContent))
