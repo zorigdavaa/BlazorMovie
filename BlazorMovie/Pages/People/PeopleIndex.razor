@@ -1,13 +1,13 @@
 ﻿@page "/People"
 @inject IPersonRepository personRepo
-
+@attribute [Authorize]
 
 <h3>PeopleIndex</h3>
 <div>
     <a href="People/CreatePerson" class="btn btn-primary">Create Person</a>
 </div>
-<Pagination CurrentPage="@paginationDTO.Page" TotalAmountPages="totalAmountPages" 
-             SelectedPage="SelectedPage"></Pagination>
+<Pagination CurrentPage="@paginationDTO.Page" TotalAmountPages="totalAmountPages"
+            SelectedPage="SelectedPage"></Pagination>
 
 <GenericList List="People">
     <WholeListTemplate>
@@ -21,20 +21,20 @@
             <tbody>
                 @foreach (var person in People)
                 {
-                <tr>
-                    <td>@person.Name</td>
-                    <td>
-                        <a class="btn btn-primary" href="/person/edit/@person.Id">Edit</a>
-                        <button class="btn btn-danger" @onclick="@(()=>DeletePerson(person.Id))">Delete</button>
-                    </td>
-                </tr>
+                    <tr>
+                        <td>@person.Name</td>
+                        <td>
+                            <a class="btn btn-primary" href="/person/edit/@person.Id">Edit</a>
+                            <button class="btn btn-danger" @onclick="@(()=>DeletePerson(person.Id))">Delete</button>
+                        </td>
+                    </tr>
                 }
             </tbody>
         </table>
     </WholeListTemplate>
 </GenericList>
 
-@code { 
+@code {
     public List<Person> People { get; set; }
     PaginationDTO paginationDTO = new PaginationDTO() { RecordsPerPage = 1 };
     private int totalAmountPages;

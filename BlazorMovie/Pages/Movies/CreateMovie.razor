@@ -2,13 +2,13 @@
 @inject NavigationManager navigationmanager
 @inject IMovieRepository movieRepository
 @inject IGenreRepository genreRepo
-
+@attribute [Authorize]
 
 <h3>CreateMovie</h3>
-@if (NotSelectedGenre!=null)
+@if (NotSelectedGenre != null)
 {
 
-<MovieForm Movie="Movie" OnValidSubmit="SaveMovie" NotSelectedGenre="NotSelectedGenre"></MovieForm>
+    <MovieForm Movie="Movie" OnValidSubmit="SaveMovie" NotSelectedGenre="NotSelectedGenre"></MovieForm>
 }
 
 @code {
@@ -25,12 +25,21 @@
     {
         try
         {
-            var movieId= await movieRepository.CreateMovie(Movie);
+            var movieId = await movieRepository.CreateMovie(Movie);
 
-            navigationmanager.NavigateTo($"/movie/{movieId}/{Movie.Title.Replace(" ","-")}");
+            navigationmanager.NavigateTo($"/movie/{movieId}/{Movie.Title.Replace(" ", "-")}");
+        }
+        catch (System.Net.WebException webexception)
+        {
+            var response = (System.Net.HttpWebResponse) webexception.Response;
+            if (response.StatusCode==System.Net.HttpStatusCode.Unauthorized)
+            {
+
+            }
         }
         catch (Exception e)
         {
+            Console.WriteLine(e.Message);
 
             throw new ApplicationException(e.Message);
         }

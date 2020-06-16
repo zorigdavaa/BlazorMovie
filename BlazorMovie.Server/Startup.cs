@@ -11,6 +11,11 @@ using Microsoft.Extensions.Hosting;
 using BlazorMovie.Server.Helpers;
 using Microsoft.Extensions.Options;
 using AutoMapper;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
+using System;
 
 namespace BlazorMovie.Server
 {
@@ -33,6 +38,23 @@ namespace BlazorMovie.Server
             {
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
             });
+            services.AddIdentity<IdentityUser, IdentityRole>()
+                .AddEntityFrameworkStores<AppDbContext>()
+                .AddDefaultTokenProviders();
+            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+                    .AddJwtBearer(options=> options.TokenValidationParameters= new TokenValidationParameters 
+                    {
+                        ValidateIssuer=false,
+                        ValidateAudience=false,
+                        ValidateLifetime=true,
+                        ValidateIssuerSigningKey=true,
+                        IssuerSigningKey=new SymmetricSecurityKey(
+                        Encoding.UTF8.GetBytes(Configuration["jwt:key"])),
+                        ClockSkew=TimeSpan.Zero
+
+
+                    });
+
             services.AddScoped<IFileStorageService, InAppStorageService>();
             services.AddHttpContextAccessor();
             services.AddAutoMapper(typeof(Startup));
@@ -50,6 +72,8 @@ namespace BlazorMovie.Server
             app.UseHttpsRedirection();
             app.UseBlazorFrameworkFiles();
             app.UseRouting();
+            app.UseAuthentication();
+            app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {

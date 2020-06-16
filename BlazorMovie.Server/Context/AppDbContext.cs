@@ -1,4 +1,5 @@
 ﻿using BlazorMovie.Shared.Entities;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace BlazorMovie.Server.Context
 {
-    public class AppDbContext:DbContext
+    public class AppDbContext:IdentityDbContext
     {
         public AppDbContext(DbContextOptions<AppDbContext> options):base(options)
         {
@@ -28,5 +29,6 @@ namespace BlazorMovie.Server.Context
         public DbSet<Movie> Movies { get; set; }
         public DbSet<MovieGenres> MovieGenres { get; set; }
         public DbSet<MoviesActors> MoviesActors { get; set; }
+        public DbSet<MovieRating> MovieRatings { get; set; }
     }
 }

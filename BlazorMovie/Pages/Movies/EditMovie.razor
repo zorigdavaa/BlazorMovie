@@ -1,10 +1,10 @@
 ﻿@page "/movies/Edit/{movieid:int}"
 @inject IMovieRepository movieRepo
 @inject NavigationManager navMan
-
+@attribute [Authorize]
 <h3>Edit Movie</h3>
-<MovieForm OnValidSubmit="Edit" Movie="Movie" 
-           NotSelectedGenre="NotSelectedGenres" 
+<MovieForm OnValidSubmit="Edit" Movie="Movie"
+           NotSelectedGenre="NotSelectedGenres"
            SelectedGenre="SelectedGenres"
            SelectedActor="SelectedActors"></MovieForm>
 @code {

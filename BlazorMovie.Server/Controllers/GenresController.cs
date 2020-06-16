@@ -4,6 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using BlazorMovie.Server.Context;
 using BlazorMovie.Shared.Entities;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -14,6 +16,7 @@ namespace BlazorMovie.Server.Controllers
 
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     public class GenresController : ControllerBase
     {
         private readonly AppDbContext context;
@@ -23,12 +26,14 @@ namespace BlazorMovie.Server.Controllers
             this.context = context;
         }
         [HttpGet]
+        [AllowAnonymous]
         public async Task<IEnumerable<Genre>> Get()
         {
             return await context.Genres.ToListAsync();
 
         }
         [HttpGet("{id}")]
+        [AllowAnonymous]
         public async Task<ActionResult<Genre>> Get(int id)
         {
             var genre = await context.Genres.FindAsync(id);

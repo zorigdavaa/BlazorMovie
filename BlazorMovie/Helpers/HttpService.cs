@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Net.Http.Json;
 using System.Text;
 using System.Text.Json;
@@ -36,6 +37,7 @@ namespace BlazorMovie.Helpers
         {
             var datajson = JsonSerializer.Serialize(data);
             var stringContent = new StringContent(datajson, Encoding.UTF8, "application/json");
+            
             var response = await httpClient.PostAsync(url, stringContent);
             return new HttpResponseWrapper<object>(null, response.IsSuccessStatusCode, response);
         }

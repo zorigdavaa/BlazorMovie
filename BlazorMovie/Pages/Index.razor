@@ -1,6 +1,17 @@
 ﻿@page "/"
 @inject IMovieRepository movieRepo
 
+<AuthorizeView>
+    <Authorized>
+        You are Authorized @context.User.Identity.Name
+    </Authorized>
+    <NotAuthorized>
+        You are not Authorized
+    </NotAuthorized>
+</AuthorizeView>
+
+
+
 <div>
     <h3>In Theathers</h3>
     <MoviesList Movies="InTheathers">

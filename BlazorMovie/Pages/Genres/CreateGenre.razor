@@ -1,13 +1,13 @@
 ﻿@page "/genre/create"
 @inject IGenreRepository genreRepository
 @inject NavigationManager navigationManager
-
+@attribute [Authorize]
 <h3>CreateGenre</h3>
 
 <GenreForm Genre="genre" OnValidSubmit="Create"></GenreForm>
 
 @code {
-    private Genre genre=new Genre();
+    private Genre genre = new Genre();
     private void Create()
     {
         try
@@ -18,7 +18,7 @@
         catch (Exception ex)
         {
             Console.WriteLine(ex.Message);
-           
+
         }
         Console.WriteLine("Create method fired");
         Console.WriteLine(genre.Name);

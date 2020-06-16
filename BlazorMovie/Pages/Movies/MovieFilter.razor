@@ -110,12 +110,13 @@
     protected override async Task OnInitializedAsync()
     {
         var queryStrings = navMan.GetQueryStrings(navMan.Uri);
+        
         Genres = await genreRepo.GetGenres();
         if (queryStrings!=null)
         {
             FillFilterWithQueryStrings(queryStrings);
         }
-            await LoadMovies();
+        await LoadMovies();
     }
 
     protected async Task LoadMovies()

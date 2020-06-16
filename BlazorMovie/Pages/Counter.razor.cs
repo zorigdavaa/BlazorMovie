@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Components;
+using Microsoft.AspNetCore.Components.Authorization;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,11 +9,22 @@ namespace BlazorMovie.Pages
 {
     public class CounterBase:ComponentBase
     {
+        [CascadingParameter] private Task<AuthenticationState> AuthenticationState { get; set; }
         protected int currentCount = 0;
 
-        protected void IncrementCount()
+        protected async Task IncrementCount()
         {
-            currentCount++;
+            var authstate = await AuthenticationState;
+            var user = authstate.User;
+            if (user.Identity.IsAuthenticated)
+            {
+                currentCount++;
+            }
+            else
+            {
+                currentCount--;
+            }
+
         }
     }
 }
